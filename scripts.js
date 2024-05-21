@@ -30,4 +30,20 @@ class Store {
     
 }
 
+// Tally Counter Reducer (Pure Function)
+// Defines how the state chanages in response to actions
+
+const tallyReducer = (state = 0, action) => {
+    switch (action.type) {
+        case "ADD":
+            return state + 1; // increment state
+            case "SUBSTRACT":
+                return state -1; //Decrement state
+                case "RESET":
+                    return 0; //Reset state to initial value
+                    default:
+                        return state;  // Return current state for unknown actions
+    }
+}
+
 
