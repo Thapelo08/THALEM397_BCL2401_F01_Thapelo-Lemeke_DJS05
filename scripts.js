@@ -18,6 +18,15 @@ class Store {
     this.state = this.reducer(this.state, action); // update state using the reducer
     this.listeners.forEach((listener) => listener(this.state)); // notify all listeners
  }
+
+ // method to subscribe a listener to state changes
+ subscribe(listener) {
+    this.listeners.push(listener); // add the listener to the list
+    return () => {
+        //Return an unsubscribe function
+        this.listeners = this.listeners.filter((1) => 1 !== listener); // Remove the listener
+    };
+ }
     
 }
 
