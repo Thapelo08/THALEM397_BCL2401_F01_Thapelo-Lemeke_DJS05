@@ -13,6 +13,11 @@ class Store {
     getState() {
        return this.state;
     }
+ // method to dispatch an action, updating the state and notifying listeners
+ dispatch(action) {
+    this.state = this.reducer(this.state, action); // update state using the reducer
+    this.listeners.forEach((listener) => listener(this.state)); // notify all listeners
+ }
     
 }
 
