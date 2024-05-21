@@ -1,19 +1,14 @@
-import { subscribe, update, Action } from "./store.js";
+{ type: 'INCREMENT'}
+{ type: 'DECREMENT'}
 
-const handler = (prev, next) => console.log(prev, next)
-const unsubscribe = subscribe(handler)
 
-/**
- * @type {Action}
- */
-const customAction = (state) => {
-    return {
-        ...state,
-        wind: {
-            ...state.wind,
-            value: state.wind.value + 19,
-        }
+function counter(state = 0, action) {
+    switch (action.type) {
+        case 'INCREMENT':
+            return state + 1;
+            case 'DECREMENT':
+                 return state -1;
+                 default:
+                    return state;
     }
 }
-
-update()
