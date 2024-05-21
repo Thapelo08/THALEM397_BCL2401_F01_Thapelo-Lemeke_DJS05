@@ -1,4 +1,4 @@
-import { subscribe, update, Action } from "./store";
+import { subscribe, update, Action } from "./store.js";
 
 const handler = (prev, next) => console.log(prev, next)
 const unsubscribe = subscribe(handler)
@@ -11,6 +11,7 @@ const customAction = (state) => {
         ...state,
         wind: {
             ...state.wind,
+            value: state.wind.value + 19,
         }
     }
 }
