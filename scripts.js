@@ -14,3 +14,7 @@ function counter(state = 0, action) {
 }
 
 let store = Redux.createStore(counter);
+
+store.subscribe(() => console.log(store.getState()));
+
+
