@@ -44,6 +44,11 @@ const tallyReducer = (state = 0, action) => {
                     default:
                         return state;  // Return current state for unknown actions
     }
-}
+};
+
+// Create the store
+
+const store = new Store(tallyReducer, 0); // Initial state is 0
+
 
 
