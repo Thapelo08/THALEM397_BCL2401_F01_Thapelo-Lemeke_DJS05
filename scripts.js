@@ -47,8 +47,13 @@ const tallyReducer = (state = 0, action) => {
 };
 
 // Create the store
-
 const store = new Store(tallyReducer, 0); // Initial state is 0
+
+//Subscribe to Changes
+const unsubscribe = store.subscribe((newState) => {
+    console.log("State Updated:", newState); // log new state to the console
+});
+
 
 
 
