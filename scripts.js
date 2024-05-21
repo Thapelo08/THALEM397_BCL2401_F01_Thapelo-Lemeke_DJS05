@@ -9,6 +9,11 @@ class Store {
         this.listeners = []; // List of subscribed listeners
     }
 
+    // Method to ge the current state
+    getState() {
+       return this.state;
+    }
     
 }
+
 
