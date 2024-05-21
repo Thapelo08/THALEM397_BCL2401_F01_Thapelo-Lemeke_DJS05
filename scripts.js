@@ -12,3 +12,5 @@ function counter(state = 0, action) {
                     return state;
     }
 }
+
+let store = Redux.createStore(counter);
