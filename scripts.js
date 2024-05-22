@@ -54,6 +54,15 @@ const unsubscribe = store.subscribe((newState) => {
     console.log("State Updated:", newState); // log new state to the console
 });
 
+//Test Scenarios
+console.log("Initial State:", store.getState()); // Scenario 1: Log initial State
 
+store.dispatch({type: "ADD"});
+store.dispatch({ type: "ADD"}); // Scenario 2: Dispatch ADD actions, increment state twice
 
+store.dispatch({type: "SUBSTRACT"}); // Scenarion 4: Dispatch SUBTRACT action, decrement state
 
+store.dispatch({type: "RESET"}); // Scenario 5: Dispatch REST action, reset state to 0
+
+// Unsubscribe
+unsubscribe(); // Remove the subscribed listener
