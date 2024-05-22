@@ -64,5 +64,5 @@ store.dispatch({type: "SUBSTRACT"}); // Scenarion 4: Dispatch SUBTRACT action, d
 
 store.dispatch({type: "RESET"}); // Scenario 5: Dispatch REST action, reset state to 0
 
-// Unsubscribe
+// Unsubscibe
 unsubscribe(); // Remove the subscribed listener
