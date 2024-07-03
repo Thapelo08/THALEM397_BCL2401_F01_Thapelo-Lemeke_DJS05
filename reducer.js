@@ -5,9 +5,12 @@ import { ADD, SUBTRACT, RESET } from "./actions"; // Imports action types
 export function reducer(state = initialState,action) {
     swicth (action.type) {
         case ADD:
-            // Increment count by 1 when ADD action is dispateched
+            // Increment count by 1 when ADD action is dispatched
             return { count: state.count + 1 };
-            
+            case SUBTRACT: 
+            // Decrement count by 1 when SUBSTRACT action is dispatched
+            return { count: state.count - 1 };
+                       
 
     }
 }
