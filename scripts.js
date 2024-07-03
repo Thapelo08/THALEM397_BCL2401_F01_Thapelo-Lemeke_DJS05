@@ -28,3 +28,16 @@ const store = createStore(reducer);
 store.subscribe(() => {
   console.log(store.getState());
 });
+
+// Scenaro 1: Initial State verification
+console.log(store.getState());
+
+// Scenario 2: Increment the counter
+store.dispatch({ type: ADD});
+store.dispatch({ type: ADD });
+
+// Scenario 3: Dcrement the counter
+store.dispatch({ type: SUBSTRACT });
+
+// Senario 4: Resetting the counter
+store.dispatch({ type: RESET });
