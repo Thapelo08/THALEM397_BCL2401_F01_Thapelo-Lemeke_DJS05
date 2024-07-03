@@ -1,3 +1,5 @@
+import { store } from "./store";
+
 // Store class to manage state
 class Store {
     // Constructor initializes the store with a reducer and an initial state
