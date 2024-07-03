@@ -12,7 +12,12 @@ function createStore(reducer) {
       currentState = reducer(currentState, action);// Function that update the state
       listeners.forEach((listener) => listener()); // Function that notifies all listeners
     },
-  }
-
-
+    // Function to subscribe to state changes, add listener to array and then remore listener from the array
+    subscribe: (listener) => {
+      listeners.push(listener);
+      reurn () => {
+        listeners = listeners.filter((1) => 1 !== listener);
+      };
+      },
+    };
 }
