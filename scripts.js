@@ -21,3 +21,10 @@ function createStore(reducer) {
       },
     };
 }
+
+const store = createStore(reducer);
+
+/* Open this with broser console */
+store.subscribe(() => {
+  console.log(store.getState());
+});
