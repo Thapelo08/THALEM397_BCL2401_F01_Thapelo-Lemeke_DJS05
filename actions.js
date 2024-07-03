@@ -6,3 +6,6 @@ export const ADD = "ADD";
 // Subtracting from the counter
 export const SUBSTRACT = "SUBSTRACT";
 
+// Resetting the counter
+export const RESET = "RESET";
+
