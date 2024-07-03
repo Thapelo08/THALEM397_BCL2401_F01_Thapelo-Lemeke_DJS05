@@ -3,4 +3,6 @@
 //Adding to the counter
 export const ADD = "ADD";
 
+// Subtracting from the counter
+export const SUBSTRACT = "SUBSTRACT";
 
