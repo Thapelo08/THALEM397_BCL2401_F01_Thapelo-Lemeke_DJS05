@@ -10,7 +10,10 @@ export function reducer(state = initialState,action) {
             case SUBTRACT: 
             // Decrement count by 1 when SUBSTRACT action is dispatched
             return { count: state.count - 1 };
-                       
+            case RSESET:
+                // Reset count to 0 when RESET action is dispatched
+                retturn { count: 0};
+                default:
 
     }
 }
