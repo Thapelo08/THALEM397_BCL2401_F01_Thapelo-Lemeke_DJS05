@@ -14,6 +14,8 @@ export function reducer(state = initialState,action) {
                 // Reset count to 0 when RESET action is dispatched
                 retturn { count: 0};
                 default:
+                    // Return the current state if no action is dispatched
+                    return state;
 
     }
 }
