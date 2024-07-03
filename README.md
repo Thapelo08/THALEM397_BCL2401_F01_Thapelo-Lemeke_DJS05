@@ -15,4 +15,4 @@ The tallyReducer function is a pure reducer, specifying how the state changes in
 Instantiate a new store with the Store class, providing the tallyReducer function and an initial state of 0 for the tally counter.Subscribe a listener function to be notified of state changes. The listener logs the new state to the console in this example.Dispatch actions (ADD, SUBTRACT, RESET) to update the state of the tally counter.Optionally, unsubscribe from further state changes to stop receiving notifications.
 
 ***CHALLENGES FACED***
--When i had to run through terminal the numbers were not appearing, reason being is that i hadn't put the getState method
+-When i had to run through terminal the numbers were not appearing, reason being is that i hadn't put the getState method.
